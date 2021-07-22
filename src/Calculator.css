@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 256px;
+  text-align: center;
+  border: 10px solid #101116;
+  background: #101116;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 249px;
+  background-color: #10111600;
+  border: 0px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#clear {
+  grid-column: 1/3;
+  grid-row: 1;
+  color: #262834;
+  background-color: #a6a6a6;
+}
+
+#result {
+  grid-column: 4/5;
+  grid-row: 5;
+  color: #ffffff;
+}
+
+#result2 {
+  grid-column: 1/3;
+  grid-row: 5;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 13%;
+}
+
+#backspace {
+  color: #262834;
+  background-color: #a6a6a6;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #303030;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+.highlight {
+  background: #ff9900;
+}
